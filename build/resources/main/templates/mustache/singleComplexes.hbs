@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Complex Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/singleStyle.css" rel="stylesheet"/>
+</head>
+<body>
+{{#complexes}}
+    <header>
+        <h2>{{title}}</h2>
+    </header>
+
+    {{#projects}}
+        <section>
+            <nav>
+                <ul>
+                    <h2><a class="selected" style="color: white" href="projects/{{title}}"><h3>{{title}}</h3></a></h2>
+                </ul>
+            </nav>
+
+            <article>
+                <li><a class="selected" href="{{gitLink}}">{{gitLink}}</a></li>
+                <h1>{{description}}</h1>
+            </article>
+            <hr>
+        </section>
+    {{/projects}}
+
+    <footer>
+        <p>Copyright &copy; 2021 Voldemar</p>
+    </footer>
+{{/complexes}}
+</body>
+</html>

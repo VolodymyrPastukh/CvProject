@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Vovan</title>
+    <link href="/static/mainStyle.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="container">
+    <div id="Header">
+        <h1>CV Data Volodymyr Pastukh</h1>
+    </div>
+    <div id="content">
+        <div id="nav">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a class="selected" href="main">Main</a></li>
+                <li><a class="selected" href="complexes">Complex Projects</a></li>
+                <li><a class="selected" href="projects">Projects</a></li>
+                <li><a class="selected" href="technologies">Technologies</a></li>
+                <li><a class="selected" href="https://github.com/VolodymyrPastukh">GitHub</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <h2> Projects </h2>
+            <ul>
+                {{#technologies}}
+                    <tr>
+                        <td><h2>{{title}}</h2></td>
+                        <td>[{{tool}} |</td>
+                        <td>{{type}}]</td>
+                    </tr><br>
+                {{/technologies}}
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Voldemar
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Vovan</title>
+    <link href="/static/mainStyle.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="container">
+    <div id="Header">
+        <h1>CV Data Volodymyr Pastukh</h1>
+    </div>
+    <div id="content">
+        <div id="nav">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a class="selected" href="main">Main</a></li>
+                <li><a class="selected" href="complexes">Complex Projects</a></li>
+                <li><a class="selected" href="projects">Projects</a></li>
+                <li><a class="selected" href="technologies">Technologies</a></li>
+                <li><a class="selected" href="addComplex">Add Complex Project</a></li>
+                <li><a class="selected" href="addProject">Add Project</a></li>
+                <li><a class="selected" href="addTech">Add Technologies</a></li>
+                <li><a class="selected" href="https://github.com/VolodymyrPastukh">GitHub</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <form action="/addProject" method="post">
+                <fieldset>
+                    <legend>Project:</legend>
+                    <b><label for="title">Title:</label></b>
+                    <input type="text" id="title" name="title"><br><br>
+
+                    <b><label for="gitLink">GitLink:</label></b>
+                    <input type="url" id="gitLink" name="gitLink"
+                           placeholder="https://github.com"
+                           pattern="https://.*" size="30"
+                           required><br><br>
+
+                    <label for="complex">Complex Project</label>
+                    <input list="complexes" name="complex" id="complex" required>
+                    <datalist id="complexes">
+                        {{#complexes}}
+                        <option value="{{.}}">
+                        {{/complexes}}
+                    </datalist><br><br>
+
+                    <b><label for="description">Description:</label></b><br>
+                    <textarea name="description" id="description" rows="10" cols="70" required></textarea>
+
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Voldemar
+    </div>
+</div>
+</body>
+</html>
